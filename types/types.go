@@ -459,10 +459,11 @@ func (txn *Transaction) FileContractID(i int) FileContractID {
 
 // A BlockHeader contains a Block's non-transaction data.
 type BlockHeader struct {
-	ParentID   BlockID   `json:"parentID"`
-	Nonce      uint64    `json:"nonce"`
-	Timestamp  time.Time `json:"timestamp"`
-	MerkleRoot Hash256   `json:"merkleRoot"`
+	ParentID      BlockID   `json:"parentID"`
+	Nonce         uint64    `json:"nonce"`
+	Timestamp     time.Time `json:"timestamp"`
+	MerkleRoot    Hash256   `json:"merkleRoot"`
+	PrevMainBlock Hash256   `json:"prevmainblock"`
 }
 
 // ID returns a hash that uniquely identifies a block.
