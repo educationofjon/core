@@ -291,6 +291,7 @@ func (h BlockHeader) EncodeTo(e *Encoder) {
 	e.WriteUint64(h.Nonce)
 	e.WriteTime(h.Timestamp)
 	h.MerkleRoot.EncodeTo(e)
+	h.PrevMainBlock.EncodeTo(e) // Modified with BMM hash
 }
 
 // EncodeTo implements types.EncoderTo.
@@ -540,6 +541,7 @@ func (h *BlockHeader) DecodeFrom(d *Decoder) {
 	h.Nonce = d.ReadUint64()
 	h.Timestamp = d.ReadTime()
 	h.MerkleRoot.DecodeFrom(d)
+	h.PrevMainBlock.DecodeFrom(d) // PreviousMainBlock hash added
 }
 
 // DecodeFrom implements types.DecoderFrom.
