@@ -190,6 +190,7 @@ var (
 	idDiscoverIP          = newID("DiscoverIP")
 	idSendBlocks          = newID("SendBlocks")
 	idSendBlk             = newID("SendBlk")
+	idRequestBMM          = newID("RequestBMM")
 	idRelayHeader         = newID("RelayHeader")
 	idRelayTransactionSet = newID("RelayTransactionSet")
 )
