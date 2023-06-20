@@ -81,6 +81,11 @@ func (r *RPCShareNodes) decodeResponse(d *types.Decoder) {
 }
 func (r *RPCShareNodes) maxResponseLen() int { return 100 * 128 }
 
+type RequestBMM struct {
+	emptyRequest
+	Hash []types.BMMHash
+}
+
 // RPCDiscoverIP requests the caller's externally-visible IP address.
 type RPCDiscoverIP struct {
 	emptyRequest

@@ -45,6 +45,9 @@ var (
 // A Hash256 is a generic 256-bit cryptographic hash.
 type Hash256 [32]byte
 
+// A 32 byte hash of the mainchain bmm block.
+type BMMHash [32]byte
+
 // A PublicKey is an Ed25519 public key.
 type PublicKey [32]byte
 
